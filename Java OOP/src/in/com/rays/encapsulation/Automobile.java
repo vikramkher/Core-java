@@ -31,22 +31,18 @@ public class Automobile {
 		this.make = make;
 	}
 
-	public void brake() {
-
-		if (speed == 0) {
-			System.out.println("car already stoped");
-		} else {
-			speed = speed - 10;
-		}
-
+	public void applyBrake() {
+		System.out.println("Brake applied. Vehicle slowing down...");
+		speed = 0;
 	}
 
-	public void accelerator() {
+	public void accelerate(int accelerateBy) {
 
-		if (speed == 250 || speed > 250) {
-			System.out.println("speed limit is high please applay brake");
+		if (accelerateBy > 0) {
+			speed += accelerateBy;
+			System.out.println("Accelerating... Current speed: " + speed + " km/h");
 		} else {
-			speed = speed + 10;
+			System.out.println("Invalid acceleration value!");
 		}
 
 	}

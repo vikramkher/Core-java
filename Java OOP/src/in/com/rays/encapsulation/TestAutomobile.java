@@ -6,20 +6,21 @@ public class TestAutomobile {
 		
 		Automobile car = new Automobile();
 		
-		car.setColor("neonGreen");
-		car.setMake("sedan");
+		car.setColor("Neon Green");
+		car.setMake("BMW M3 Competition");
 		car.setSpeed(200);
 		System.out.println("the car is a: " + car.getMake());
 		System.out.println("the colour of the car is: " + car.getColor());
-		System.out.println("speed of the car: " + car.getSpeed());
+		System.out.println("speed of the car: " + car.getSpeed() + "km/hr");
 		
-		if(car.getSpeed()<250) {
-			car.accelerator();
-		}else {
-			car.brake();
-	}
-		System.out.println("speed of car after acceleration: " + car.getSpeed());
+		System.out.println("\nTesting Aceeleration.....");
+		car.accelerate(50);
+		car.accelerate(40);
 		
+		System.out.println("\nApplying Brake.....");
+		car.applyBrake();
+		System.out.println("Current speed after brake: " + car.getSpeed() + "km/hr");
 
-	}
+	
 }
+	}
